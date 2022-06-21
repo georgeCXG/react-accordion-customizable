@@ -1,0 +1,30 @@
+{
+    "name": "customizable-accordion-component",
+    "version": "1.5.0",
+    "description": "",
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "GeorgeCXG",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^17.0.39",
+        "@types/react": "^18.0.11",
+        "@types/react-dom": "^18.0.5",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "typescript": "^4.7.3"
+    },
+    "peerDependencies": {
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0"
+    }
+}
