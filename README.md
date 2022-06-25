@@ -4,10 +4,6 @@ React Accordion Customizable
 
 > Simple Customizable React Accordion Component
 
-## Screenshot
-
-![](https://t.alipayobjects.com/images/rmsweb/T1bWpgXgBaXXXXXXXX.png) -->
-
 ## Example
 
 ![Example](https://media3.giphy.com/media/jpyk9H0eFUR9jU9PKJ/giphy.gif?cid=790b76110b2cd1359552211dcd78f38768bf1f9d30c930be&rid=giphy.gif&ct=g)
