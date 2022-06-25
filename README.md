@@ -17,7 +17,7 @@ npm install --save react-accordion-customizable
 ## Usage
 
 ```jsx
-import { Accordion } from 'customizable-accordion-component';
+import { Accordion } from 'react-accordion-customizable';
 
 const Component = () => {
     return (
@@ -104,13 +104,13 @@ const Component = () => {
           <td>iconsLeft</td>
           <td>Array</td>
           <td>[null]</td>
-          <td>Multiple icons on the left side as [<Icon1/>,<Icon2>]</td>
+          <td>Multiple icons on the left side as [JSX,JSX]</td>
         </tr>
         <tr>
           <td>iconsRight</td>
           <td>Array</td>
           <td>[null]</td>
-          <td>Multiple icons on the right side as [<Icon1/>,<Icon2>]</td>
+          <td>Multiple icons on the right side as [JSX,JSX]</td>
         </tr>
         <tr>
           <td>iconSize</td>
