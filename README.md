@@ -1,34 +1,37 @@
-# customizable-accordion-component
+# react-accordion-customizable
 
-React Accordion Component
+React Accordion Customizable
 
-[![NPM version][npm-image]][npm-url]
+> Simple Customizable React Accordion Component
 
-[npm-url]: https://www.npmjs.com/package/customizable-accordion-component
-
-<!-- ## Screenshot
+## Screenshot
 
 ![](https://t.alipayobjects.com/images/rmsweb/T1bWpgXgBaXXXXXXXX.png) -->
 
-<!-- ## Example
+## Example
 
-online example: http://react-component.github.io/dropdown/examples/ -->
+![Example](https://media3.giphy.com/media/jpyk9H0eFUR9jU9PKJ/giphy.gif?cid=790b76110b2cd1359552211dcd78f38768bf1f9d30c930be&rid=giphy.gif&ct=g)
+
+## Install
+
+```bash
+npm install --save react-accordion-customizable
+```
 
 ## Usage
 
-```js
-// import
+```jsx
 import { Accordion } from 'customizable-accordion-component';
 
 const Component = () => {
     return (
         <div>
             <Accordion onChangeStatus={(status) => setState(status)}>
-                <Accordion.Item label="Vegetables">
-                    <div style={{ background: 'red', padding: '20px' }}>Vegetables</div>
+                <Accordion.Item label="Label_1">
+                    <Component />
                 </Accordion.Item>
-                <Accordion.Item label="Fruits">
-                    <div style={{ background: 'red', padding: '20px' }}>Fruits</div>
+                <Accordion.Item label="Label_2">
+                    <Component />
                 </Accordion.Item>
             </Accordion>
         </div>
@@ -36,9 +39,9 @@ const Component = () => {
 };
 ```
 
-## API
+## Props
 
-### Accordion PROPS
+### Accordion Props
 
 <table class="table table-bordered table-striped">
     <thead>
@@ -89,15 +92,75 @@ const Component = () => {
           <td></td>
           <td>The name of the label</td>
         </tr>
+        <tr>
+          <td>labelPosition</td>
+          <td>String</td>
+          <td>'start'</td>
+          <td>Justify position, options ['start','end','between','center']</td>
+        </tr>
+        <tr>
+          <td>labelReverse</td>
+          <td>Boolean</td>
+          <td>false</td>
+          <td>Reverse the inital position</td>
+        </tr>
+        <tr>
+          <td>iconsLeft</td>
+          <td>Array</td>
+          <td>[null]</td>
+          <td>Multiple icons on the left side as [<Icon1/>,<Icon2>]</td>
+        </tr>
+        <tr>
+          <td>iconsRight</td>
+          <td>Array</td>
+          <td>[null]</td>
+          <td>Multiple icons on the right side as [<Icon1/>,<Icon2>]</td>
+        </tr>
+        <tr>
+          <td>iconSize</td>
+          <td>Number</td>
+          <td>20</td>
+          <td>Size of the initial icon</td>
+        </tr>
+        <tr>
+          <td>secondaryIcon</td>
+          <td>JSX.Element</td>
+          <td>null</td>
+          <td>Secondary Icon</td>
+        </tr>
+        <tr>
+          <td>removeDefaultIcon</td>
+          <td>Boolean</td>
+          <td>false</td>
+          <td>Remove the initial default icon</td>
+        </tr>
+        <tr>
+          <td>removeAnimation</td>
+          <td>Boolean</td>
+          <td>false</td>
+          <td>Remove the default animation</td>
+        </tr>
+        <tr>
+          <td>transitionAnimation</td>
+          <td>Number</td>
+          <td>200</td>
+          <td>Duration of the animation in MS</td>
+        </tr>
+        <tr>
+          <td>removeAnimationIcon</td>
+          <td>Boolean</td>
+          <td>false</td>
+          <td>Remove the initial animation on default icon</td>
+        </tr>
+        <tr>
+          <td>style</td>
+          <td>CSS</td>
+          <td>null</td>
+          <td>Adds styling on item accordion</td>
+        </tr>
     </tbody>
 </table>
 
-## Development
-
-```
-npm install customizable-accordion-component
-```
-
 ## License
 
-customizable-accordion-component is released under the MIT license.
+react-accordion-customizable is released under the MIT license.

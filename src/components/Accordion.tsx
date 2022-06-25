@@ -15,7 +15,7 @@ interface AccordionItemProps {
     children: React.ReactNode;
     style: React.CSSProperties;
     isOpen: boolean;
-    toggleOpen: () => void;
+    toggleOpen?(): void;
 }
 
 export const AccordionItem = (props: AccordionItemProps) => {
@@ -32,7 +32,7 @@ export const AccordionItem = (props: AccordionItemProps) => {
         transitionAnimation = 200,
         removeAnimationIcon = false,
         children,
-        isOpen,
+        isOpen = false,
         toggleOpen,
         style
     } = props;
@@ -95,7 +95,7 @@ export const AccordionItem = (props: AccordionItemProps) => {
 
     return (
         <>
-            <div {...props} style={_styles} onClick={() => toggleOpen()}>
+            <div {...props} style={_styles} onClick={() => toggleOpen?.()}>
                 {secondaryIcon}
                 {iconsLeft?.map((i) => i)}
                 {label}
@@ -116,7 +116,7 @@ export const AccordionItem = (props: AccordionItemProps) => {
 interface AccordionProps {
     children: React.ReactNode;
     multipleOpen: boolean;
-    onChangeStatus: (status: Array<object>) => void;
+    onChangeStatus?(state: Array<object>): void;
     initialOpen: Array<Number>;
 }
 
@@ -187,7 +187,9 @@ export const Accordion = (props: AccordionProps) => {
     });
 
     useEffect(() => {
-        onChangeStatus(state);
+        if (state.length !== 0) {
+            onChangeStatus?.(state);
+        }
     }, [state]);
 
     return <>{RenderMainComponent}</>;

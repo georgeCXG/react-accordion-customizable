@@ -27,7 +27,7 @@ exports.Accordion = exports.AccordionItem = void 0;
 const react_1 = __importStar(require("react"));
 const AccordionItem = (props) => {
     var _a;
-    const { label, labelPosition = 'start', labelReverse = false, iconsLeft, iconsRight, iconSize = 20, secondaryIcon, removeDefaultIcon = false, removeAnimation = false, transitionAnimation = 200, removeAnimationIcon = false, children, isOpen, toggleOpen, style } = props;
+    const { label, labelPosition = 'start', labelReverse = false, iconsLeft, iconsRight, iconSize = 20, secondaryIcon, removeDefaultIcon = false, removeAnimation = false, transitionAnimation = 200, removeAnimationIcon = false, children, isOpen = false, toggleOpen, style } = props;
     const [positionContent, setPositionContent] = (0, react_1.useState)('space-between');
     const [positionReverse, setPositionReverse] = (0, react_1.useState)('row');
     // Align ca justify
@@ -60,7 +60,7 @@ const AccordionItem = (props) => {
         transform: isOpen ? 'rotate(0deg)' : 'rotate(180deg)'
     };
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", Object.assign({}, props, { style: _styles, onClick: () => toggleOpen() }),
+        react_1.default.createElement("div", Object.assign({}, props, { style: _styles, onClick: () => toggleOpen === null || toggleOpen === void 0 ? void 0 : toggleOpen() }),
             secondaryIcon, iconsLeft === null || iconsLeft === void 0 ? void 0 :
             iconsLeft.map((i) => i),
             label,
@@ -117,7 +117,9 @@ const Accordion = (props) => {
         return child;
     });
     (0, react_1.useEffect)(() => {
-        onChangeStatus(state);
+        if (state.length !== 0) {
+            onChangeStatus === null || onChangeStatus === void 0 ? void 0 : onChangeStatus(state);
+        }
     }, [state]);
     return react_1.default.createElement(react_1.default.Fragment, null, RenderMainComponent);
 };

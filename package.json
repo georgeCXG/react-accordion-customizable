@@ -1,6 +1,6 @@
 {
-    "name": "customizable-accordion-component",
-    "version": "1.5.0",
+    "name": "react-accordion-customizable",
+    "version": "1.0.0",
     "description": "",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",

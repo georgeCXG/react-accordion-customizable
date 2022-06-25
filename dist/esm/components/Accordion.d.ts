@@ -14,13 +14,13 @@ interface AccordionItemProps {
     children: React.ReactNode;
     style: React.CSSProperties;
     isOpen: boolean;
-    toggleOpen: () => void;
+    toggleOpen?(): void;
 }
 export declare const AccordionItem: (props: AccordionItemProps) => JSX.Element;
 interface AccordionProps {
     children: React.ReactNode;
     multipleOpen: boolean;
-    onChangeStatus: (status: Array<object>) => void;
+    onChangeStatus?(state: Array<object>): void;
     initialOpen: Array<Number>;
 }
 export declare const Accordion: {
