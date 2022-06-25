@@ -8,6 +8,10 @@ React Accordion Customizable
 
 ![Example](https://media3.giphy.com/media/jpyk9H0eFUR9jU9PKJ/giphy.gif?cid=790b76110b2cd1359552211dcd78f38768bf1f9d30c930be&rid=giphy.gif&ct=g)
 
+## Github
+
+> https://github.com/georgeCXG/react-accordion-customizable
+
 ## Install
 
 ```bash
